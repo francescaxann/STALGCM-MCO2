@@ -8,6 +8,7 @@
         <exception regexp="yes" regexp_match="full">(?i)ika-[0-9]{1,3}</exception>
       </pattern>
       <message>Gamitin ang gitling sa "ika-" + numeral.</message>
+      <short>Ika- + numeral hyphenation</short>
       <suggestion>$1-$2</suggestion>
       <example>Tinawag siya sa <marker>ika-7</marker> na baitang.</example>
       <example correction="ika-7">Tinawag siya sa <marker>ika7</marker> na baitang.</example>
@@ -19,6 +20,7 @@
         <exception regexp="yes" regexp_match="full">(?i)taga-(Maynila|Cebu|Davao|Baguio)</exception>
       </pattern>
       <message>Kapag "taga-" + pangngalang pantangi, dapat may gitling.</message>
+      <short>taga- + proper noun hyphenation</short>
       <suggestion>$1-$2</suggestion>
       <example>Siya ay <marker>taga-Maynila</marker> ngunit dito nagtatrabaho.</example>
       <example correction="taga-Maynila">Siya ay <marker>tagaMaynila</marker> ngunit dito nagtatrabaho.</example>
@@ -30,6 +32,7 @@
         <exception regexp="yes" regexp_match="full">(?i)(araw-araw|gabi-gabi|taon-taon)</exception>
       </pattern>
       <message>Sa pag-uulit ng buong salita, gamitin ang gitling.</message>
+      <short>Full-word reduplication hyphenation</short>
       <suggestion>$1-$1</suggestion>
       <example>Umaaraw siya ng jogging <marker>araw-araw</marker>.</example>
       <example correction="araw-araw">Umaaraw siya ng jogging <marker>arawaraw</marker>.</example>
