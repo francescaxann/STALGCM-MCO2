@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules lang="tl">
+  <category id="FILIPINO_SPELLING_MCO2" name="Filipino Spelling Rules (OP/MMP)">
+
+    <rule id="FIL_IKA_NUMERAL_HYPHEN" name="Ika + numeral requires hyphen">
+      <pattern>
+        <token regexp="yes">ika([0-9]+)</token>
+      </pattern>
+      <message>Gamitin ang gitling sa "ika-" + numeral.</message>
+      <suggestion><match no="1" regexp_match="ika([0-9]+)" regexp_replace="ika-$1"/></suggestion> 
+      <example correction="ika-7">Siya ay kasalukuyang nasa <marker>ika7</marker> na baitang.</example>
+    </rule>
+
+    <rule id="FIL_TAGA_PROPER_NOUN_HYPHEN" name="taga + proper noun requires hyphen">
+      <pattern>
+        <token regexp="yes">taga(Maynila|Cebu|Davao|Baguio|Mindanao)</token>
+      </pattern>
+      <message>Kapag "taga-" + pangngalang pantangi, dapat may gitling.</message>
+      <suggestion><match no="1" regexp_match="taga(.*)" regexp_replace="taga-$1"/></suggestion>
+      <example correction="taga-Maynila">Siya ay <marker>tagaMaynila</marker>.</example>
+    </rule>
+
+    <rule id="FIL_FULLWORD_REDUP_HYPHEN" name="Full-word reduplication needs hyphen">
+      <pattern>
+        <token regexp="yes">(araw|gabi|taon|lagi){2}</token>
+      </pattern>
+      <message>Sa pag-uulit ng buong salita, gamitin ang gitling.</message>
+      <short>Full-word reduplication hyphenation</short>
+      <suggestion><match no="1" regexp_match="(.+)\1" regexp_replace="$1-$1"/></suggestion>
+      <example correction="araw-araw">Tumatakbo siya <marker>arawaraw</marker>.</example>
+    </rule>
+
+  </category>
+</rules>
